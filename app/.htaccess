@@ -1,0 +1,7 @@
+Options -Indexes
+RewriteEngine on
+RewriteBase /restapi/
+RewriteCond %{REQUEST_FILENAME} !-d  
+RewriteCond %{REQUEST_FILENAME} !-f  
+RewriteCond %{REQUEST_FILENAME} !-l 
+RewriteRule ^(.+)$ services.php?$1 [QSA,NC,L] 
